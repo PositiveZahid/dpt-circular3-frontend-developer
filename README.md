@@ -1,4 +1,4 @@
-# Assessment guide for Vue.JS developer
+# Assessment test for Vue.JS developer
 
 1. Fork this repository.
 2. Clone this repository to your local machine.
@@ -12,9 +12,9 @@
 10. Mention how much have you spent to complete this.
 11. Push your branch and send a pull request.
 
-$ Create a simple form, make sure we can bind model with input fields.
-$ Upon click on submit button retrive local data insted of online call.
-$ We are proding data as json format which you will use as API response.
-$ Follow https://flightexpert.com or https://gozayaan.com to understand what are we doing.
-$ LHR = Heathrow Airport, CDG = Paris Charles de Gaulle Airport
-$ Try to complete the task with Options API and Composition API (if you have time and experience, optional).
+-   Create a simple form, make sure we can bind model with input fields.
+-   Upon click on submit button retrive local data insted of online call.
+-   We are proding data as json format which you will use as API response.
+-   Follow https://flightexpert.com or https://gozayaan.com to understand what are we doing.
+-   LHR = Heathrow Airport, CDG = Paris Charles de Gaulle Airport
+-   Try to complete the task with Options API and Composition API (if you have time and experience, optional).
