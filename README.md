@@ -18,5 +18,6 @@
 -   Upon click on submit button retrive local data insted of online call.
 -   We are proding data as json format which you will use as API response.
 -   Follow https://flightexpert.com or https://gozayaan.com to understand what are we doing.
--   LHR = Heathrow Airport, CDG = Paris Charles de Gaulle Airport
--   Try to complete the task with Options API and Composition API (if you have time and experience, optional).
+-   LHR = Heathrow Airport, CDG = Paris Charles de Gaulle Airport.
+-   Try to complete the task with Options API.
+-   Try to complete using Composition API (if you have time and experience, optional).
