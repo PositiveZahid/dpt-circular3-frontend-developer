@@ -1,11 +1,12 @@
 <template>
-  <div class="text-4xl text-red-500">this is vue app</div>
+  <home-page></home-page>
 </template>
 
 <script>
+import HomePage from "../src/views/home-page/index.vue";
 export default {
   name: "App",
-  components: {},
+  components: { HomePage },
 };
 </script>
 
