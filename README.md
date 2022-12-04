@@ -9,7 +9,7 @@
 7. Parse and show your data according to the image provided.
 8. Take screenshot and add to the image folder.
 9. Write the necessary steps to run your project on readme file.
-10. Mention how much have you spent to complete this.
+10. Mention how much time have you spent to complete this.
 11. Push your branch and send a pull request.
 
 ==============================================================
