@@ -1,5 +1,7 @@
 <template>
-  <home-page></home-page>
+  <div class="w-[1200px] mx-auto">
+    <home-page></home-page>
+  </div>
 </template>
 
 <script>
