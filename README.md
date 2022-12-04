@@ -1,4 +1,4 @@
-# Assessment test for Vue.JS developer
+# Assessment test for Frontend Developer ( Vue.JS )
 
 1. Fork this repository.
 2. Clone this repository to your local machine.
