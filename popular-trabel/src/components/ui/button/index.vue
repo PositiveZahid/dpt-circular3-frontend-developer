@@ -1,5 +1,5 @@
 <template lang="">
-  <button class="bg-blue-900 px-8 py-2 rounded text-white mb-7">
+  <button :type="type" class="bg-blue-900 px-8 py-2 rounded text-white mb-7">
     {{ label }}
   </button>
 </template>
@@ -11,6 +11,10 @@ export default {
       type: String,
       required: true,
       default: "",
+    },
+    type: {
+      type: String,
+      required: false,
     },
   },
 };

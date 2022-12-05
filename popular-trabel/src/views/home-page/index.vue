@@ -19,10 +19,38 @@
           </button>
         </Tab>
       </TabList>
-
+      <form class="mt-7 text-end" @submit.prevent="searching">
+        <div class="flex space-x-6 justify-center">
+          <ui-input
+            class="w-40"
+            placeholder="FROM"
+            v-model="state.formData.from"
+          ></ui-input>
+          <ui-input
+            class="w-40"
+            placeholder="TO"
+            v-model="state.formData.to"
+          ></ui-input>
+          <ui-input
+            class="w-40"
+            placeholder="JOURNEY DATE"
+            v-model="state.formData.journey_date"
+          ></ui-input>
+          <ui-input
+            class="w-40"
+            placeholder="RETURN DATE"
+            v-model="state.formData.return_date"
+          ></ui-input>
+          <ui-input
+            class="w-40"
+            placeholder="CLASS"
+            v-model="state.formData.class"
+          ></ui-input>
+        </div>
+        <ui-button type="submit" label="Search" @click="fetchData"></ui-button>
+      </form>
       <TabPanels class="mt-2">
         <TabPanel>
-          <ui-button label="Search" @click="fetchData"></ui-button>
           <ui-table :headers="state.headers" class="w-full">
             <tr
               v-for="(item, key) in state.data"
@@ -89,9 +117,16 @@
               </td>
             </tr>
           </ui-table>
+          <div v-if="!state.data.length">
+            <p class="text-center p-6 text-xl">No Data Found!</p>
+          </div>
         </TabPanel>
-        <TabPanel>this is tab panel2 </TabPanel>
-        <TabPanel>this is tab panel3 </TabPanel>
+        <TabPanel>
+          <p class="text-xl text-center">Page Under Construction</p>
+        </TabPanel>
+        <TabPanel>
+          <p class="text-xl text-center">Page Under Construction</p>
+        </TabPanel>
       </TabPanels>
     </TabGroup>
   </div>
@@ -103,6 +138,7 @@ import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 import UiButton from "../../../src/components/ui/button/index.vue";
 import response from "../../../src/components/data/responseData";
 import UiTable from "../../../src/components/ui/table/index.vue";
+import UiInput from "../../../src/components/ui/input/index.vue";
 export default {
   components: {
     TabGroup,
@@ -112,10 +148,18 @@ export default {
     TabPanel,
     UiButton,
     UiTable,
+    UiInput,
   },
   setup() {
     const state = reactive({
       tabs: ["One Way", "Round Trip", "Multi City"],
+      formData: {
+        from: "",
+        to: "",
+        journey_date: "",
+        return_date: "",
+        class: "",
+      },
       headers: [
         {
           label: "Flight",
@@ -145,6 +189,10 @@ export default {
       data: [],
     });
 
+    const searching = () => {
+      console.log("formdata", state.formData);
+    };
+
     const fetchData = () => {
       console.log("fetchData", response.flightOffer);
       state.data = response.flightOffer;
@@ -159,7 +207,7 @@ export default {
       return segmented;
     };
 
-    return { state, fetchData, getItineraries };
+    return { state, fetchData, getItineraries, searching };
   },
 };
 </script>
