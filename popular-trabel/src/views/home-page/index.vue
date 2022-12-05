@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full max-w-md px-2 py-16 sm:px-0">
+  <div class="w-full px-2 py-16 sm:px-0">
     <TabGroup>
-      <TabList class="flex rounded border-2 border-blue-900">
+      <TabList class="flex max-w-md mx-auto rounded border-2 border-blue-900">
         <Tab
           v-for="(item, key) in state.tabs"
           as="template"
@@ -23,7 +23,7 @@
       <TabPanels class="mt-2">
         <TabPanel>
           <ui-button label="Search" @click="fetchData"></ui-button>
-          <ui-table :headers="state.headers">
+          <ui-table :headers="state.headers" class="w-full">
             <tr
               v-for="(item, key) in state.data"
               :key="key"
@@ -64,7 +64,6 @@
                   >{{ flight }}</span
                 >
               </td>
-              <td class="table-data">afdasdf</td>
               <td class="table-data">
                 <span
                   v-for="(segment, key) in getItineraries(item.itineraries[0])"
@@ -84,8 +83,9 @@
               <td class="table-data">
                 {{ item.itineraries[0]?.duration }}
               </td>
-              <td class="table-data">
+              <td class="table-data text-center">
                 {{ item.price }}
+                <ui-button class="mt-3" label="Select"></ui-button>
               </td>
             </tr>
           </ui-table>
@@ -130,9 +130,6 @@ export default {
           label: "Fare",
         },
         {
-          label: "Route",
-        },
-        {
           label: "Departure",
         },
         {
@@ -159,7 +156,6 @@ export default {
       item?.segments.map((segment) => {
         segmented.push(segment);
       });
-      console.log("seg", segmented);
       return segmented;
     };
 
