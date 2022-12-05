@@ -1,3 +1,11 @@
+### Necessary Step for run project
+- clone repository
+- checkout "hasan" branch or merge pull request in "master branch"
+- run command "npm install"
+- run command "npm run serve / yarn serve"
+- spend almost 3.5 hours to complete this full project
+
+
 # Assessment test for Frontend Developer ( Vue.JS )
 
 1. Fork this repository.
@@ -24,3 +32,4 @@
 -   You do not need to make the form dynamic or filter anything, Just parse the data.
 -   Try to complete the task with Options API.
 -   Try to complete using Composition API (if you have time and experience, optional).
+
