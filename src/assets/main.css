@@ -1,0 +1,98 @@
+@import "./base.css";
+
+body {
+  /* font-family: "Arial Narrow"; */
+  font-family: galvji;
+}
+@font-face {
+  font-family: "galvji";
+  src: url("../assets/font/galvji.ttf");
+  /* src: url("../assets/font/Rubik-VariableFont_wght.ttf"); */
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+/* custom css start */
+.color-two{
+  color: #E65625;
+}
+.text-color-black {
+  color: #443737;
+}
+.bg-color {
+  background-color: #101A41;
+}
+.bg-color-two{
+  background-color: #EDEDED;
+}
+.bg-color-three{
+  background-color: #E65625;
+}
+.router-link-active {
+  color: #F2994A;
+}
+.max-width {
+  max-width: 1200px;
+}
+.banner-max-height {
+  max-height: 900px;
+}
+.banner-min-height {
+  min-height: 400px;
+}
+.banner-min-height-about {
+  min-height: 500px;
+}
+.big-img-max-height{
+  max-height: 520px;
+}
+.project-sub-menu.router-link-active{
+  color: black;
+}
+.router-link-active:hover{
+  background-color: #101A41;
+}
+.vue3-circular-progressbar {
+  width: 265px !important;
+}
+.powerby-bg-image {
+  background-image: url("../assets/images/footer/bg.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/* custom css end */
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* large screen */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+  .banner-gif-image {
+    width: 700px;
+  }
+}
+/* tab screen */
+@media (min-width: 810px) {
+  
+}
+/* mobile srceen */
+@media (min-width: 400px) {
+  
+}
