@@ -26,4 +26,4 @@
 
 -   Upload your code on github and send us link.
 -   message.to.zahid@gmail.com
--
+-   Video guideline:- https://www.loom.com/share/87a2a73e58484f18b08b47ad5af55e99
