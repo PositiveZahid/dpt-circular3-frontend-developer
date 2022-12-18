@@ -18,7 +18,7 @@
 ==============================================================
 
 -   Complete this task using fresh laravel project.
--   Complete this task using fresh Vue JS project.
+-   OR complete this task using fresh Vue JS project.
 -   Update your readme file how can we run the proejct.
 -   Mention how much time have you spent for this to complete.
 
