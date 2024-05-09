@@ -17,12 +17,12 @@
 
 ==============================================================
 
--   Complete this task using fresh laravel/Vue JS/React JS project.
+-   Complete this task using fresh laravel/Vue JS/React JS or any other language.
 -   Update your readme file how can we run the proejct.
 -   Mention how much time have you spent for this to complete.
 -   Mention the best practices you've implemented in your code.
 -   Provide URLs for two of your live frontend projects.
--    Share links to your top two personal Git repositories.
+-   Share links to your top two personal Git repositories.
 
 ==============================================================
 
