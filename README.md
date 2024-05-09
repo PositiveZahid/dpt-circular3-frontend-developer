@@ -1,4 +1,4 @@
-# Assessment test for Junior Software Engineer
+# Assessment test for Frontend Developer
 
 1. Fork this repository.
 2. Clone this repository to your local machine.
@@ -17,13 +17,14 @@
 
 ==============================================================
 
--   Complete this task using fresh laravel project.
--   OR complete this task using fresh Vue JS project.
+-   Complete this task using fresh laravel/Vue JS/React JS project.
 -   Update your readme file how can we run the proejct.
 -   Mention how much time have you spent for this to complete.
+-   Mention the best practices you've implemented in your code.
+-   Provide URLs for two of your live frontend projects.
+-    Share links to your top two personal Git repositories.
 
 ==============================================================
 
 -   Upload your code on github and send us link.
--   message.to.zahid@gmail.com
 -   Video guideline:- https://www.loom.com/share/87a2a73e58484f18b08b47ad5af55e99
