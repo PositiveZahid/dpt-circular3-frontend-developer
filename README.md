@@ -1,75 +1,70 @@
-# Nuxt 3 Minimal Starter
+# Master Price
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Master Price is a Flight management WebApp.
 
-## Setup
+### Live link:
 
-Make sure to install the dependencies:
+[https://master-price-amt.netlify.app](https://master-price-amt.netlify.app/)
+
+### GitHub Code link:
+
+[https://github.com/AmtTawsik/dpt-circular3-frontend-developer](https://github.com/AmtTawsik/dpt-circular3-frontend-developer)
+
+## Clone the Repository:
 
 ```bash
-# npm
+git clone https://github.com/AmtTawsik/dpt-circular3-frontend-developer
+```
+
+## Go to the Repository:
+
+```bash
+cd <project-directory>
+```
+
+## Installation Process:
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Run The project:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+## Total time Spent:
 
-## Production
+I have spent approximately 4 hours working on this project.
+I started the Project at approximately 10.00 PM on 09 May 2024. I fork and clone the project on my device, and then I Create the Project structure and push the code with the initial commit on GitHub. 
 
-Build the application for production:
+I mainly started working on this project at 10.00 AM on 10 May 2024. and I have completed the project within 4 hours.
 
-```bash
-# npm
-npm run build
+## Best Practices Implemented:
 
-# pnpm
-pnpm run build
+    * Implemented clean and organized code structure.
+    * Utilized component-based architecture for better reusability.
+    * Followed coding standards and conventions.
+    * Integrated responsive design for better user experience across devices.
+    * Used meaningful variable and function names for improved readability.
+    * Ensured proper error handling and validation.
+    * Conducted thorough testing and debugging.
+    * Documented code and provided clear comments for better maintainability.
 
-# yarn
-yarn build
+## My frontend projects Link:
 
-# bun
-bun run build
-```
+1. [Nest-Shapers (React/Next.js Project)](https://nest-shapers-front-end.vercel.app)
+2. [SaveEfforts (Vue/Nuxt3 Project)](https://saveefforts-dev.vercel.app)
 
-Locally preview production build:
+## My personal Git repositories:
 
-```bash
-# npm
-npm run preview
+##### Note:
 
-# pnpm
-pnpm run preview
+I didn't use Git Version Control in any of my personal projects but I use Git version control in some of my Company/Official Projects in GitLab and those are private repositories.
 
-# yarn
-yarn preview
+1. [https://github.com/AmtTawsik/Nest-Shapers-Front-End](https://github.com/AmtTawsik/Nest-Shapers-Front-End)
+2. [https://github.com/AmtTawsik/PC-Builder-With-Next.js](https://github.com/AmtTawsik/PC-Builder-With-Next.js)
 
-# bun
-bun run preview
-```
+## Author
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+[Abdullah Al Mubin](https://abdullah-al-mubin.netlify.app/)
