@@ -1,9 +1,21 @@
 <template>
-    <div>
-        <h2 class="text-2xl font-bold text-center">Hello Boss</h2>
-    </div>
+    <FormSection @formSubmitted="fetchData" />
+    <TableSection :flightOffers="flightOffers" />
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';
 
+
+const flightOffers = ref([]);
+
+const fetchData = async () => {
+  try {
+    const response = await axios.get('/data.json');
+    flightOffers.value = response.data.flightOffer;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
 </script>

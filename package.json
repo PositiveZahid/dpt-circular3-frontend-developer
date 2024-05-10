@@ -13,6 +13,7 @@
     "@nuxt/ui": "^2.15.2",
     "@vue-hero-icons/outline": "^1.7.2",
     "@vue-hero-icons/solid": "^1.7.2",
+    "axios": "^1.6.8",
     "flowbite": "^2.3.0",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
