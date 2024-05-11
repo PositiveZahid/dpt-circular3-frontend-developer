@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./App.css";
 import { DataContext } from "./hooks/ContextProvider/ContextProvider";
 import Trip from "./components/Trip/Trip";
+import TripFilter from "./components/TripFilter/TripFilter";
 
 function App() {
   const data = useContext(DataContext);
@@ -16,6 +17,7 @@ function App() {
       <hr />
       <div className="px-5">
         <Trip />
+        <TripFilter />
       </div>
     </div>
   );

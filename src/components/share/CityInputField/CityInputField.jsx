@@ -1,38 +1,60 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const CityInputField = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedContent, setSelectedContent] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const dropdownRef = useRef(null);
+
+  const dropdownContent = [
+    "Uppercase",
+    "Lowercase",
+    "Camel Case",
+    "Kebab Case",
+  ];
+
+  //   when click anywhere in window dropdown menu close
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("click", handleClickOutside);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+    // Set default selected content when dropdown is opened
+    if (!isOpen) {
+      setSelectedContent(selectedContent);
+    }
   };
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
   };
 
+  const handleContentClick = (content) => {
+    setSelectedContent(content);
+    setIsOpen(false);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="relative group">
+    <div className="w-[150px]">
+      <div className="relative group" ref={dropdownRef}>
         <button
           id="dropdown-button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500"
+          className="inline-flex uppercase w-full px-3 py-2 text-sm font-medium text-textColor bg-white border border-textColor  shadow-sm focus:outline-none "
           onClick={toggleDropdown}
         >
-          <span className="mr-2">Open Dropdown</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 ml-2 -mr-1"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <span className="mr-2">{selectedContent || dropdownContent[0]}</span>
         </button>
         <div
           id="dropdown-menu"
@@ -50,54 +72,23 @@ const CityInputField = () => {
             onChange={handleInputChange}
           />
           {/* Dropdown content goes here */}
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-            style={{
-              display:
-                searchTerm === "" || "uppercase".includes(searchTerm)
-                  ? "block"
-                  : "none",
-            }}
-          >
-            Uppercase
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-            style={{
-              display:
-                searchTerm === "" || "lowercase".includes(searchTerm)
-                  ? "block"
-                  : "none",
-            }}
-          >
-            Lowercase
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-            style={{
-              display:
-                searchTerm === "" || "camel case".includes(searchTerm)
-                  ? "block"
-                  : "none",
-            }}
-          >
-            Camel Case
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
-            style={{
-              display:
-                searchTerm === "" || "kebab case".includes(searchTerm)
-                  ? "block"
-                  : "none",
-            }}
-          >
-            Kebab Case
-          </a>
+          {dropdownContent.map((content, index) => (
+            <a
+              key={index}
+              href="#"
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer rounded-md"
+              style={{
+                display:
+                  searchTerm === "" ||
+                  content.toLowerCase().includes(searchTerm)
+                    ? "block"
+                    : "none",
+              }}
+              onClick={() => handleContentClick(content)}
+            >
+              {content}
+            </a>
+          ))}
         </div>
       </div>
     </div>
