@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./App.css";
 import { DataContext } from "./hooks/ContextProvider/ContextProvider";
+import Trip from "./components/Trip/Trip";
 
 function App() {
   const data = useContext(DataContext);
@@ -8,8 +9,14 @@ function App() {
   console.log(data);
 
   return (
-    <div>
-      <h2 className="text-red-500">hellp world</h2>
+    <div className="container mx-auto ">
+      <div className="px-3 py-1">
+        <h2 className="capitalize font-extrabold text-2xl">master price</h2>
+      </div>
+      <hr />
+      <div className="px-5">
+        <Trip />
+      </div>
     </div>
   );
 }
