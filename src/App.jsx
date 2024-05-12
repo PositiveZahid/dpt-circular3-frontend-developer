@@ -3,11 +3,11 @@ import "./App.css";
 import { DataContext } from "./hooks/ContextProvider/ContextProvider";
 import Trip from "./components/Trip/Trip";
 import TripFilter from "./components/TripFilter/TripFilter";
+import SearchSection from "./components/SearchSection/SearchSection";
+import FlightTable from "./components/FlightTable/FlightTable";
 
 function App() {
-  const data = useContext(DataContext);
-
-  console.log(data);
+  const { data: datas, loading } = useContext(DataContext);
 
   return (
     <div className="container mx-auto ">
@@ -18,6 +18,9 @@ function App() {
       <div className="px-5">
         <Trip />
         <TripFilter />
+        <SearchSection />
+        <p className="font-semibold">{datas?.message}</p>
+        <FlightTable datas={datas} loading={loading} />
       </div>
     </div>
   );

@@ -1,16 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-const CityInputField = () => {
+const CityInputField = ({ dropdownContent }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedContent, setSelectedContent] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef(null);
-
-  const dropdownContent = [
-    "Uppercase",
-    "Lowercase",
-    "Camel Case",
-    "Kebab Case",
-  ];
 
   //   when click anywhere in window dropdown menu close
   useEffect(() => {
@@ -58,7 +51,7 @@ const CityInputField = () => {
         </button>
         <div
           id="dropdown-menu"
-          className={`absolute right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 ${
+          className={`absolute h-[250px] z-50 overflow-auto right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 ${
             isOpen ? "" : "hidden"
           }`}
         >
@@ -72,7 +65,7 @@ const CityInputField = () => {
             onChange={handleInputChange}
           />
           {/* Dropdown content goes here */}
-          {dropdownContent.map((content, index) => (
+          {dropdownContent?.map((content, index) => (
             <a
               key={index}
               href="#"
