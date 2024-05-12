@@ -1,30 +1,44 @@
-# Assessment test for Frontend Developer
+# Time
 
-1. Fork this repository.
-2. Clone this repository to your local machine.
-3. Check data and image folder.
-4. Follow the image first. There is a search form and formated data.
-5. You need to create a flight search form with HTML, CSS and Tailwind CSS.
-6. On form submit get the json data privided inside data folder.
-7. Parse and show your data according to the image provided.
+This project took 10 hours to complete.
 
-==============================================================
+# Best Practice
 
--   Follow https://flightexpert.com or https://gozayaan.com to understand what are we doing.
--   Do not copy Flight Expert or Go Zayaan, just get idea and follow the image we have given.
--   LHR = Heathrow Airport, CDG = Paris Charles de Gaulle Airport.
--   You do not need to make the form dynamic or filter anything, Just parse the data.
+1. reusable component
+2. data global manage by useContext hook
+3. easily understand component name and variable name
+4. maintainable folder and organize full project
+5. when complete a litte task ,immediately git commit with understand message and git push.
 
-==============================================================
+# Run This project
 
--   Complete this task using fresh laravel/Vue JS/React JS or any other language.
--   Update your readme file how can we run the proejct.
--   Mention how much time have you spent for this to complete.
--   Mention the best practices you've implemented in your code.
--   Provide URLs for two of your live frontend projects.
--   Share links to your top two personal Git repositories.
+```
+npm install or npm i
+npm run dev
+```
 
-==============================================================
+# My Project
 
--   Upload your code on github and send us link.
--   Video guideline:- https://www.loom.com/share/87a2a73e58484f18b08b47ad5af55e99
+1. I'm working a E-commerce web application. This project has used full stack framework Next.js. And also has used redux-toolkit, axios, tailwind, mongodb,Using cloudinary for image upload etc.
+
+live-link: https://my-ecommerce-xi.vercel.app
+
+admin: https://my-ecommerce-xi.vercel.app/admin
+
+github: https://github.com/abedinwahid9/my-ecommerce
+
+2. It's a Home buy and sales.This project has 3 type of role admin,agent,user. This project has used MUI, MERN stack, tanstack-query, axios etc;
+
+**Access** :
+
+- admin: admin@gmail.com
+  - password: Admin1
+- agent: agent@gmail.com
+  - password: Agent12
+
+live-link: https://harborhomes.netlify.app
+
+github:
+client- https://github.com/abedinwahid9/real-state-clients
+
+server- https://github.com/abedinwahid9/real-state-server
