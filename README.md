@@ -20,7 +20,8 @@ npm run dev
 # My Project
 
 1. I'm working a E-commerce web application. This project has used full stack framework Next.js. And also has used redux-toolkit, axios, tailwind, mongodb,Using cloudinary for image upload etc.
-   live-link: https://my-ecommerce-xi.vercel.app
+
+live-link: https://my-ecommerce-xi.vercel.app
 
 admin: https://my-ecommerce-xi.vercel.app/admin
 
@@ -35,8 +36,9 @@ github: https://github.com/abedinwahid9/my-ecommerce
 - agent: agent@gmail.com
   - password: Agent12
 
-link-link: https://harborhomes.netlify.app
+live-link: https://harborhomes.netlify.app
+
 github:
 client- https://github.com/abedinwahid9/real-state-clients
 
-servet- https://github.com/abedinwahid9/real-state-server
+server- https://github.com/abedinwahid9/real-state-server
