@@ -20,7 +20,13 @@ Clone the project
   git clone git@github.com:Hasibul294/dpt-circular3-frontend-developer.git
 ```
 
-Go to the project directory
+After cloning the repository go to development branch
+
+```bash
+  git checkout development
+```
+
+After switching development then go to the project directory
 
 ```bash
   cd my-task-with-react
