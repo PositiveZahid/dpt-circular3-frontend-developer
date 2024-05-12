@@ -1,0 +1,3 @@
+<template>
+    <Router-view />
+</template>
