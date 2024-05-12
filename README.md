@@ -64,6 +64,10 @@ After run the project navigating to the 'Master Price' route from the navbar, yo
 
 **Server:** Json file
 
+## 🔗 Project live link
+
+[dpt assignment project](https://dpt-project-live.netlify.app/master-price)
+
 ## Appendix
 
 - Complete this task using fresh React JS.
