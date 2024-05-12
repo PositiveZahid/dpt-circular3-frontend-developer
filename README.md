@@ -1,4 +1,4 @@
-![alt text](./project/public//tech.png)
+![alt text](./project/public/tech.png)
 
 ### Setup Locally
 
