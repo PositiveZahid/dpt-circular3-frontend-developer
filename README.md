@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sourav Samkaria's Flight Details Project
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project, built using **TypeScript**, **React 18**, **Next.js**, and **Tailwind CSS**, is a flight details application. It fetches data from an API and displays it in a modern design system created with Tailwind CSS. The project leverages TypeScript for defining type safety throughout the codebase, ensuring more robust and error-free code.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to Run the Project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository** to your local machine:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+   ```
+   git clone git@github.com:Sourav7Samkaria/dpt-circular3-frontend-developer.git
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+2. **Install dependencies**:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```
+   npm install
+   # or
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Start the development server**:
 
-## Learn More
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Open the application** in your browser at http://localhost:3000.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Flight Data Table**: The application displays a comprehensive table of flight data. This table includes key details about each flight, such as the flight number, departure and arrival times, and the status of the flight.
 
-## Deploy on Vercel
+- **Form Inputs**: The application includes various forms for user input. These forms can be used to add new flights, update existing flight details, and more. The forms are designed with user experience in mind, making it easy for users to input and submit their data.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Real-Time Updates**: The application is designed to provide real-time updates on flight status. This ensures that users always have the most up-to-date information about their flights.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Server-Side Rendering (SSR)**: The application leverages Next.js's server-side rendering capabilities. This means that the initial page load is faster and the application is more SEO-friendly.
+
+- **API Integration**: The application integrates with an external API to fetch the flight data. This allows the application to display real-time, accurate information about a wide range of flights.
+
+## Time Spent on the Project
+
+Approximately **7 hours** were spent on completing this project. The major challenge was setting up the API using Next.js's built-in features and ensuring best coding practices throughout the project.
+
+## Best Practices Implemented
+
+- **TypeScript Usage**: Leveraged TypeScript to define types for better type safety and code clarity.
+- **Component Reusability**: Utilized reusable components to structure the code and reduce redundancy.
+- **Tailwind CSS**: Implemented Tailwind CSS for a modern design system, following Tailwind's color configurations for consistency.
+- **Next.js API Routes**: Created API routes with Next.js to handle data fetching and seamlessly integrate with React components.
+- **Fullstack Approach**: Used the Next.js API feature to create backend logic and consume it in frontend components, showcasing a fullstack approach.
+
+## Live Projects
+
+Here are two of my live frontend projects:
+
+1. [Project 1](https://wizer.business/)
+2. [Project 2](https://rasp.com.au/)
