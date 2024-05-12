@@ -1,9 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
-import { DataContext } from "./hooks/ContextProvider/ContextProvider";
 import Trip from "./components/Trip/Trip";
 import TripFilter from "./components/TripFilter/TripFilter";
-
 import FlightTable from "./components/FlightTable/FlightTable";
 
 function App() {

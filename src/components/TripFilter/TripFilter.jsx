@@ -1,7 +1,6 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import CityInputField from "../share/CityInputField/CityInputField";
 import CommonInputField from "../share/CommonInputField/CommonInputField";
-
 import "./tripfilter.css";
 import { DataContext } from "../../hooks/ContextProvider/ContextProvider";
 import SearchSection from "../SearchSection/SearchSection";
