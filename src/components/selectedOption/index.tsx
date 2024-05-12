@@ -1,10 +1,12 @@
+import {FC, ChangeEvent } from "react";
+
 interface SelectOptionProps {
   label: string;
   value: number;
-  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange?: (e: ChangeEvent<HTMLSelectElement>) => void;
 }
 
-export const SelectOption: React.FC<SelectOptionProps> = ({
+export const SelectOption: FC<SelectOptionProps> = ({
   label,
   value,
   onChange,

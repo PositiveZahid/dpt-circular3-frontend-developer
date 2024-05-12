@@ -1,9 +1,9 @@
 import { FlightData } from "@/types/flight";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { FC, Fragment, useEffect, useState } from "react";
 import SearchForm from "../searchForm";
 import { TableCell } from "../tableCell";
 
-const FlightDetails: React.FC = () => {
+const FlightDetails: FC = () => {
   const [flightData, setFlightData] = useState<FlightData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 

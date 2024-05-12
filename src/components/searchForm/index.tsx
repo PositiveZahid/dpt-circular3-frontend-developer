@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, FC, useState } from "react";
 import { RadioButton } from "../radioButton";
 import { SelectOption } from "../selectedOption";
 import { TabButton } from "../tabButton";
 
 interface Props {}
 
-const SearchForm: React.FC<Props> = () => {
+const SearchForm: FC<Props> = () => {
   const [activeTab, setActiveTab] = useState<string>("oneWay");
   const [dayMinus, setDayMinus] = useState<number>(0);
   const [dayPlus, setDayPlus] = useState<number>(0);
@@ -13,13 +13,13 @@ const SearchForm: React.FC<Props> = () => {
 
   const handleTabClick = (tab: string) => setActiveTab(tab);
 
-  const handleDayMinusChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
+  const handleDayMinusChange = (e: ChangeEvent<HTMLSelectElement>) =>
     setDayMinus(parseInt(e.target.value));
 
-  const handleDayPlusChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
+  const handleDayPlusChange = (e: ChangeEvent<HTMLSelectElement>) =>
     setDayPlus(parseInt(e.target.value));
 
-  const handleAdultsChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleAdultsChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const value = parseInt(e.target.value);
     setAdults(value);
   };
