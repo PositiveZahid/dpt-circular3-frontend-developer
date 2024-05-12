@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-const CityInputField = ({ dropdownContent }) => {
+
+const CityInputField = ({ dropdownContent, inputData }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedContent, setSelectedContent] = useState("");
+  const [selectedContent, setSelectedContent] = useState(dropdownContent[0]);
   const [searchTerm, setSearchTerm] = useState("");
   const dropdownRef = useRef(null);
 
@@ -20,7 +21,7 @@ const CityInputField = ({ dropdownContent }) => {
     return () => {
       window.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [inputData, selectedContent, dropdownContent]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -42,13 +43,15 @@ const CityInputField = ({ dropdownContent }) => {
   return (
     <div className="w-[150px]">
       <div className="relative group" ref={dropdownRef}>
-        <button
-          id="dropdown-button"
-          className="inline-flex uppercase w-full px-3 py-2 text-sm font-medium text-textColor bg-white border border-textColor  shadow-sm focus:outline-none "
+        <input
+          type="text"
+          id="dropdown-input"
+          className="inline-flex uppercase w-full px-3 py-2 text-sm font-medium text-textColor bg-white border border-textColor shadow-sm focus:outline-none"
           onClick={toggleDropdown}
-        >
-          <span className="mr-2">{selectedContent || dropdownContent[0]}</span>
-        </button>
+          value={selectedContent || dropdownContent[0]}
+          readOnly
+          ref={inputData}
+        />
         <div
           id="dropdown-menu"
           className={`absolute h-[250px] z-50 overflow-auto right-0 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 space-y-1 ${

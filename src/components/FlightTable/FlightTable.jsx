@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const FlightTable = ({ datas, loading }) => {
+const FlightTable = ({ datas }) => {
   const tableHeads = [
     "flight",
     "aircraft",
@@ -16,30 +16,28 @@ const FlightTable = ({ datas, loading }) => {
 
   return (
     <div className="my-3">
-      <div className="p-6 px-0 ">
-        <table className="w-full text-left  table-auto min-w-max">
-          <thead>
-            <tr className="bg-[#E5E7EB] text-[#464749] ">
-              {tableHeads?.map((tableHead, i) => {
-                return (
-                  <th key={i} className="p-4 ">
-                    <p className="block text-center uppercase font-bold font-sans text-sm antialiased  leading-none text-blue-gray-900 opacity-70">
-                      {tableHead}
-                    </p>
-                  </th>
-                );
-              })}
-            </tr>
-          </thead>
-          <tbody>
-            {loading ? (
-              <tr>
-                <td>
-                  <p>Loading...</p>
-                </td>
+      {datas.length === 0 ? (
+        <tr>
+          <td></td>
+        </tr>
+      ) : (
+        <div className="p-6 px-0 ">
+          <table className="w-full text-left  table-auto min-w-max">
+            <thead>
+              <tr className="bg-[#E5E7EB] text-[#464749] ">
+                {tableHeads?.map((tableHead, i) => {
+                  return (
+                    <th key={i} className="p-4 ">
+                      <p className="block text-center uppercase font-bold font-sans text-sm antialiased  leading-none text-blue-gray-900 opacity-70">
+                        {tableHead}
+                      </p>
+                    </th>
+                  );
+                })}
               </tr>
-            ) : (
-              datas?.flightOffer.map((data, i) => {
+            </thead>
+            <tbody>
+              {datas?.flightOffer.map((data, i) => {
                 return (
                   <tr key={i} className="odd:bg-[#f8f7f7] even:bg-[#e2e5e7]">
                     <td className="  pb-3 border-b border-red-500">
@@ -159,11 +157,11 @@ const FlightTable = ({ datas, loading }) => {
                     </td>
                   </tr>
                 );
-              })
-            )}
-          </tbody>
-        </table>
-      </div>
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

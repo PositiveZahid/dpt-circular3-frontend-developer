@@ -1,13 +1,13 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./App.css";
 import { DataContext } from "./hooks/ContextProvider/ContextProvider";
 import Trip from "./components/Trip/Trip";
 import TripFilter from "./components/TripFilter/TripFilter";
-import SearchSection from "./components/SearchSection/SearchSection";
+
 import FlightTable from "./components/FlightTable/FlightTable";
 
 function App() {
-  const { data: datas, loading } = useContext(DataContext);
+  const [filterData, setFilterData] = useState([]);
 
   return (
     <div className="container mx-auto ">
@@ -17,10 +17,9 @@ function App() {
       <hr />
       <div className="px-5">
         <Trip />
-        <TripFilter />
-        <SearchSection />
-        <p className="font-semibold">{datas?.message}</p>
-        <FlightTable datas={datas} loading={loading} />
+        <TripFilter setFilterData={setFilterData} />
+        <p className="font-semibold">{filterData?.message}</p>
+        <FlightTable datas={filterData} />
       </div>
     </div>
   );

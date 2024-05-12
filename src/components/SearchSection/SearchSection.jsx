@@ -51,7 +51,10 @@ const SearchSection = () => {
         </div>
       </div>
       <div>
-        <button className="text-xs font-bold rounded-[4px] uppercase bg-secondaryColor text-white py-2 px-6">
+        <button
+          type="submit"
+          className="text-xs font-bold rounded-[4px] uppercase bg-secondaryColor text-white py-2 px-6"
+        >
           search
         </button>
       </div>
