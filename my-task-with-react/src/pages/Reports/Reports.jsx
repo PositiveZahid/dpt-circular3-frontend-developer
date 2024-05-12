@@ -1,5 +1,11 @@
+import ComingSoon from "../../components/Default/ComingSoon";
+
 const Reports = () => {
-  return <div>This is Reports page</div>;
+  return (
+    <div>
+      <ComingSoon></ComingSoon>
+    </div>
+  );
 };
 
 export default Reports;

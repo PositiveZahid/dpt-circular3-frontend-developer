@@ -13,15 +13,17 @@ import MasterPrice from "./pages/MasterPrice/MasterPrice.jsx";
 import CustomPrice from "./pages/CustomPrice/CustomPrice.jsx";
 import Calender from "./pages/Calender/Calender.jsx";
 import Reports from "./pages/Reports/Reports.jsx";
+import Error404 from "./pages/Error404/Error404.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout></RootLayout>}>
-      <Route path="" element={<Dashboard></Dashboard>} />
-      <Route path="master-price" element={<MasterPrice></MasterPrice>} />
-      <Route path="custom-price" element={<CustomPrice></CustomPrice>} />
-      <Route path="calender" element={<Calender></Calender>} />
-      <Route path="reports" element={<Reports></Reports>} />
+    <Route path="/" element={<RootLayout />}>
+      <Route path="" element={<Dashboard />} />
+      <Route path="master-price" element={<MasterPrice />} />
+      <Route path="custom-price" element={<CustomPrice />} />
+      <Route path="calender" element={<Calender />} />
+      <Route path="reports" element={<Reports />} />
+      <Route path="*" element={<Error404 />} />
     </Route>
   )
 );

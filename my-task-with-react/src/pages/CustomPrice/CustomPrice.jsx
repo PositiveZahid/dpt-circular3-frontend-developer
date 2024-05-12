@@ -1,5 +1,11 @@
+import ComingSoon from "../../components/Default/ComingSoon";
+
 const CustomPrice = () => {
-  return <div>This is CustomPrice page</div>;
+  return (
+    <div>
+      <ComingSoon></ComingSoon>
+    </div>
+  );
 };
 
 export default CustomPrice;

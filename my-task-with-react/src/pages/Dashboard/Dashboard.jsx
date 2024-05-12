@@ -1,5 +1,11 @@
+import ComingSoon from "../../components/Default/ComingSoon";
+
 const Dashboard = () => {
-  return <div>This is Dashboard page</div>;
+  return (
+    <div>
+      <ComingSoon></ComingSoon>
+    </div>
+  );
 };
 
 export default Dashboard;
